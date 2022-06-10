@@ -1,8 +1,11 @@
 {
-    "C_Cpp.errorSquiggles": "Disabled",
-    "files.associations": {
-        "*.py": "python",
-        "stdio.h": "c",
-        "random": "c"
-    }
+  "C_Cpp.errorSquiggles": "Disabled",
+  "files.associations": {
+    "*.py": "python",
+    "stdio.h": "c",
+    "random": "c",
+    "bitset": "c",
+    "chrono": "c",
+    "algorithm": "c"
+  }
 }
