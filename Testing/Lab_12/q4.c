@@ -5,6 +5,9 @@
 
 int main(){
     int arr[10000];
+    int data,head,tail;
+    head=arr[0];
+    
     printf("Menu\n");
     printf("1.Insert at beginning\n");
     printf("2.Insert at end\n");
@@ -17,7 +20,7 @@ int main(){
     int choice;
     switch (choice) 
     {
-    case 1: enqueue(&head,arr);
+    case 1: enqueue(arr,data,&head,&tail);
         break;
     
     case 2: dequeue(&head);
