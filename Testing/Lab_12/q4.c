@@ -3,11 +3,12 @@
 #include <stdlib.h>
 #include <math.h>
 
-int main(){
+int main()
+{
     int arr[10000];
-    int data,head,tail;
-    head=arr[0];
-    
+    int data, head, tail;
+    head = arr[0];
+
     printf("Menu\n");
     printf("1.Insert at beginning\n");
     printf("2.Insert at end\n");
@@ -18,58 +19,73 @@ int main(){
     printf("7.Print\n");
     printf("8.Exit\n");
     int choice;
-    switch (choice) 
+    switch (choice)
     {
-    case 1: enqueue(arr,data,&head,&tail);
-        break;
-    
-    case 2: dequeue(&head);
+    case 1:
+        enqueue(arr, data, &head, &tail);
         break;
 
-    case 3: printfront(&head);
-        break;
-    
-    case 4: printrear(&head);
+    case 2:
+        dequeue(arr, &head, &tail);
         break;
 
-    case 5: printempty(&head);
-        break;
-    
-    case 6: printfull(&head);
+    case 3:
+        printfront(&head);
         break;
 
-    default: printf("Invalid choice");
+    case 4:
+        printrear(&head);
+        break;
+
+    case 5:
+        printempty(&head);
+        break;
+
+    case 6:
+        printfull(&head);
+        break;
+
+    default:
+        printf("Invalid choice");
         break;
     }
     return 0;
 }
 
-void enqueue(int arr[],int data,int *front,int *rear){
-    if(*rear==9999){
+void enqueue(int arr[], int data, int *front, int *rear)
+{
+    if (*rear == 9999)
+    {
         printf("Queue is full");
         return;
     }
-    if(*front==-1){
-        *front=0;
+    if (*front == -1)
+    {
+        *front = 0;
     }
-    *rear=(*rear)+1;
-    arr[*rear]=data;
+    *rear = (*rear) + 1;
+    arr[*rear] = data;
 }
-void dequeue(int arr[],int *front,int *rear){
-    if(*front==-1){
+void dequeue(int arr[], int *front, int *rear)
+{
+    if (*front == -1)
+    {
         printf("Queue is empty");
         return;
     }
-    *front=(*front)+1;
+    *front = (*front) + 1;
 }
-void printqueue(int arr[],int front,int rear){
+void printqueue(int arr[], int front, int rear)
+{
     int i;
-    if(front==-1){
+    if (front == -1)
+    {
         printf("Queue is empty");
         return;
     }
-    for(i=front;i<=rear;i++){
-        printf("%d ",arr[i]);
+    for (i = front; i <= rear; i++)
+    {
+        printf("%d ", arr[i]);
     }
     printf("\n");
 }
@@ -155,4 +171,3 @@ void printqueue(int arr[],int front,int rear){
 //     i=front+n;
 //     printf("%d\n",arr[i]);
 // }
-
