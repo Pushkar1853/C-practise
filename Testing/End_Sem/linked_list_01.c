@@ -13,9 +13,10 @@ void Insert(struct node **head, int x)
     temp->data = x;
     temp->next = NULL;
     if (*head != NULL)
-        temp->next = *head;
+    temp->next = *head;
     *head = temp;
 }
+
 void Print(struct node *head)
 {
     printf("List is:");
@@ -26,7 +27,6 @@ void Print(struct node *head)
     }
     printf("NULL\n");
 }
-
 
 int main()
 {

@@ -6,6 +6,7 @@ struct node{
 };
 
 struct node* head;
+
 void insert(int data,int n){
     struct node *temp1= createnode();
     temp1->data=data;
@@ -22,6 +23,7 @@ void insert(int data,int n){
     temp1->next=temp2->next;
     temp2->next=temp1;
 }
+
 int main(){
     head=NULL;
     insert(2,1);

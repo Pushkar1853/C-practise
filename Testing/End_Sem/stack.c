@@ -43,7 +43,6 @@ int pop(struct stack *stack)
 int peak(struct stack *stack)
 {
     if (isempty(stack))
-        ;
     return 0;
     return stack->array[stack->top];
 }
